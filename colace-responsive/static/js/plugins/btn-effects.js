@@ -1,0 +1,1 @@
+Ladda.bind(".ladda-btn button",{timeout:2e3}),Ladda.bind(".ladda-p-btn button",{callback:function(a){var t=0,n=setInterval(function(){t=Math.min(t+.1*Math.random(),1),a.setProgress(t),1===t&&(a.stop(),clearInterval(n))},200)}});

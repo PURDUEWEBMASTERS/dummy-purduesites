@@ -1,0 +1,103 @@
+s3_id: <%= ENV['S3_ID'] %> 
+s3_secret: <%= ENV['S3_SECRET'] %>
+s3_bucket: dev-colace-responsive
+cloudfront_distribution_id: E43GA624C1H6T
+gzip: true
+max_age: 30
+exclude_from_upload:
+- s3_website.yml
+routing_rules:
+- condition:
+    key_prefix_equals: colace/index.aspx
+  redirect:
+    host_name: dev.colacecapsules.com
+    replace_key_prefix_with: colace/
+    http_redirect_code: 301
+- condition:
+    key_prefix_equals: peri-colace/index.aspx
+  redirect:
+    host_name: dev.colacecapsules.com
+    replace_key_prefix_with: peri-colace/
+    http_redirect_code: 301
+- condition:
+    key_prefix_equals: buy/default.aspx
+  redirect:
+    host_name: dev.colacecapsules.com
+    replace_key_prefix_with: buy/
+    http_redirect_code: 301
+- condition:
+    key_prefix_equals: savings/index.aspx
+  redirect:
+    host_name: dev.colacecapsules.com
+    replace_key_prefix_with: savings/
+    http_redirect_code: 301
+- condition:
+    key_prefix_equals: constipation/index.aspx
+  redirect:
+    host_name: dev.colacecapsules.com
+    replace_key_prefix_with: constipation/
+    http_redirect_code: 301
+- condition:
+    key_prefix_equals: constipation/causes.aspx
+  redirect:
+    host_name: dev.colacecapsules.com
+    replace_key_prefix_with: constipation/causes/
+    http_redirect_code: 301
+- condition:
+    key_prefix_equals: constipation/pregnant.aspx
+  redirect:
+    host_name: dev.colacecapsules.com
+    replace_key_prefix_with: constipation/pregnant/
+    http_redirect_code: 301
+- condition:
+    key_prefix_equals: constipation/medical.aspx
+  redirect:
+    host_name: dev.colacecapsules.com
+    replace_key_prefix_with: constipation/medical/
+    http_redirect_code: 301
+- condition:
+    key_prefix_equals: constipation/prevention.aspx
+  redirect:
+    host_name: dev.colacecapsules.com
+    replace_key_prefix_with: constipation/prevention/
+    http_redirect_code: 301
+- condition:
+    key_prefix_equals: legal/index.aspx
+  redirect:
+    host_name: dev.colacecapsules.com
+    replace_key_prefix_with: legal/
+    http_redirect_code: 301
+- condition:
+    key_prefix_equals: about/index.aspx
+  redirect:
+    host_name: dev.colacecapsules.com
+    replace_key_prefix_with: about/
+    http_redirect_code: 301
+- condition:
+    key_prefix_equals: media/index.aspx
+  redirect:
+    host_name: dev.colacecapsules.com
+    replace_key_prefix_with: media/
+    http_redirect_code: 301
+- condition:
+    key_prefix_equals: contact/index.aspx
+  redirect:
+    host_name: dev.colacecapsules.com
+    replace_key_prefix_with: contact/
+    http_redirect_code: 301
+- condition:
+    key_prefix_equals: sitemap/index.aspx
+  redirect:
+    host_name: dev.colacecapsules.com
+    replace_key_prefix_with: sitemap/
+    http_redirect_code: 301
+error_document: sitemap/index.html
+extensionless_mime_type: text/html
+cloudfront_invalidate_root: false
+cloudfront_distribution_config:
+  default_cache_behavior:
+    min_TTL: 30
+  aliases:
+    quantity: 1
+    items:
+      CNAME: dev.colacecapsules.com

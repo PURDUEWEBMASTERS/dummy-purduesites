@@ -1,0 +1,1 @@
+jQuery(document).ready(function(){$("a.showmore").click(function(){return $(this).hasClass("active")?($(".recipe-hide").hide(),$(this).text("SHOW MORE +").removeClass("active")):($("a.recipe-hide").fadeIn(400),$(this).text("SHOW LESS -").addClass("active")),!1})});

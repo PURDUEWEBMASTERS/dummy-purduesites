@@ -1,0 +1,77 @@
+﻿<div class="header">
+			<!-- Topbar -->
+			<div class="topbar">
+				<div class="container">
+					<!-- Topbar Navigation -->
+						   
+					<% if @item[:periColace] %>
+					<% %>
+					<% else %>
+					    <div class="linkTop">
+				            <p>Pregnant or new mom?*<a href="/constipation/pregnant/" class="linkTopAnchor"> Get relief from occasional constipation</a></p>
+				        </div><!-- End Topbar Navigation -->
+				   <% end %>
+				   
+				</div>
+			</div><!-- End Topbar -->
+			<!-- Navbar -->
+			<div class="navbar navbar-default" role="navigation">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="fa fa-bars"></span>
+						</button>
+						<a class="navbar-brand" href="/">
+							<img id="logo-header" src="/assets/img/global/logo-colace.png" alt="Colace®">
+						</a>
+						<a class="navbar-brand" href="/">
+							<img id="logo-header-colace-clear" src="/assets/img/global/logo_colace_clear.png" alt="Colace_Clear">
+						</a>
+                        <a class="navbar-brand " href="/">
+							<img id="logo-header-peri" src="/assets/img/global/logo-peri-colace.png" alt="Peri-Colace®">
+						</a>
+					</div>
+					<div class="collapse navbar-collapse navbar-responsive-collapse">
+						<ul class="nav navbar-nav">
+							<!-- Colace -->
+							<li class="<%= active_link('/colace/') %>" >
+								<a href="/colace/" class="dropdown-toggle" >Colace<sup>&reg;</sup></a>
+							</li><!-- End Colace -->
+                            <!-- Colace -->
+							<li class="<%= active_link('/colace-clear/') %>" >
+								<a href="/colace-clear/" class="dropdown-toggle" >Colace Clear<sup>&reg;</sup></a>
+							</li><!-- End Colace -->
+							<!-- Peri-Colace -->                        
+							<li class="<%= active_link('/peri-colace/') %>" >
+								<a href="/peri-colace/" class="dropdown-toggle" >Peri&#8209;Colace<sup>&reg;</sup></a>
+							</li><!-- End Peri-Colace -->
+							<!-- Constipation -->
+						    <li class="dropdown <%= active_link('/constipation/') %> <%= active_link('/constipation/causes/') %>
+						    <%= active_link('/constipation/pregnant/') %> <%= active_link('/constipation/medical/') %> <%= active_link('/constipation/prevention') %>" >
+								<a href="/constipation/" class="dropdown-toggle " id="constipationMenu" data-toggle="dropdown">Constipation</a>
+								<ul class="dropdown-menu">
+								  <li class="mobileOnly" ><a href="/constipation/"  >Constipation</a></li>                           
+									<li><a href="/constipation/causes/" >Common Causes</a></li>
+									<li><a href="/constipation/pregnant/" >Pregnant Women and New Moms</a></li>
+									<li><a href="/constipation/medical/">Medical Conditions</a></li>
+									<li><a href="/constipation/prevention/">Prevention</a></li>                              
+								</ul>
+							</li><!-- End constipation -->
+							<!-- Community -->
+							<li class="dropdown <%= active_link('/community/') %>" >
+								<a href="/community/" class="dropdown-toggle">Colace<sup>&reg;</sup> Community</a>
+							</li><!-- End Community -->
+							<!-- Buy Now -->
+							<li class="dropdown <%= active_link('/buy/') %> ">
+								<a href="/buy/" class="dropdown-toggle">Buy Now</a>
+							</li><!-- End Buy Now -->
+							<!-- Savings -->
+					<!--		<li class="dropdown savings <%= active_link('/savings/') %> ">
+								<a href="/savings/" class="dropdown-toggle">Savings</a>
+							</li--> <!-- End Savings-->
+						</ul>
+					</div><!--/navbar-collapse-->
+				</div>    
+			</div><!-- End Navbar -->
+		</div>

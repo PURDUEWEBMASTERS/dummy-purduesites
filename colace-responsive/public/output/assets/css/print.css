@@ -1,0 +1,3 @@
+#navigation, #header .callout, #masthead, #main .sidebar, #footer, a.print, #recipes { display:none !important; }
+body, #container, #header { background:none !important; }
+#main .content { float:none; width:auto; }

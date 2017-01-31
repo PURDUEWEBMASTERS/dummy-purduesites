@@ -1,0 +1,95 @@
+Crashlog created at 2016-04-26 14:30:40 -0400
+
+===== MESSAGE:
+
+RuntimeError: Could not read static/plugins/line-icons/License.txt because the file is not valid UTF-8.
+
+===== COMPILATION STACK:
+
+  (empty)
+
+===== STACK TRACE:
+
+  0. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/data_sources/filesystem.rb:307:in `raise_encoding_error'
+  1. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/data_sources/filesystem.rb:295:in `read'
+  2. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/data_sources/filesystem.rb:227:in `parse'
+  3. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/data_sources/filesystem.rb:64:in `block (2 levels) in load_objects'
+  4. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/data_sources/filesystem.rb:51:in `each'
+  5. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/data_sources/filesystem.rb:51:in `block in load_objects'
+  6. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/data_sources/filesystem.rb:50:in `each'
+  7. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/data_sources/filesystem.rb:50:in `load_objects'
+  8. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/data_sources/filesystem.rb:24:in `items'
+  9. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/base/repos/site_loader.rb:31:in `block (2 levels) in site_from_config'
+  10. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/base/repos/site_loader.rb:30:in `each'
+  11. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/base/repos/site_loader.rb:30:in `block in site_from_config'
+  12. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/base/repos/site_loader.rb:55:in `with_data_sources'
+  13. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/base/repos/site_loader.rb:29:in `site_from_config'
+  14. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/base/repos/site_loader.rb:12:in `new_from_cwd'
+  15. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/cli/command_runner.rb:24:in `site'
+  16. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/cli/error_handler.rb:156:in `site'
+  17. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/cli/error_handler.rb:161:in `compiler'
+  18. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/cli/error_handler.rb:166:in `stack'
+  19. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/cli/error_handler.rb:270:in `write_compilation_stack'
+  20. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/cli/error_handler.rb:116:in `write_compact_error'
+  21. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/cli/error_handler.rb:92:in `print_error'
+  22. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/cli/error_handler.rb:71:in `rescue in handle_while'
+  23. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/cli/error_handler.rb:45:in `handle_while'
+  24. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/cli/error_handler.rb:22:in `handle_while'
+  25. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/cli/command_runner.rb:11:in `call'
+  26. /usr/local/lib/ruby/gems/2.1.0/gems/cri-2.7.0/lib/cri/command_dsl.rb:233:in `block in runner'
+  27. /usr/local/lib/ruby/gems/2.1.0/gems/cri-2.7.0/lib/cri/command.rb:294:in `call'
+  28. /usr/local/lib/ruby/gems/2.1.0/gems/cri-2.7.0/lib/cri/command.rb:294:in `run_this'
+  29. /usr/local/lib/ruby/gems/2.1.0/gems/cri-2.7.0/lib/cri/command.rb:247:in `run'
+  30. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/cli/commands/nanoc.rb:37:in `block in define'
+  31. /usr/local/lib/ruby/gems/2.1.0/gems/cri-2.7.0/lib/cri/command.rb:294:in `call'
+  32. /usr/local/lib/ruby/gems/2.1.0/gems/cri-2.7.0/lib/cri/command.rb:294:in `run_this'
+  33. /usr/local/lib/ruby/gems/2.1.0/gems/cri-2.7.0/lib/cri/command.rb:247:in `run'
+  34. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/cli.rb:53:in `block in run'
+  35. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/cli/error_handler.rb:64:in `handle_while'
+  36. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/cli/error_handler.rb:22:in `handle_while'
+  37. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib/nanoc/cli.rb:51:in `run'
+  38. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/bin/nanoc:9:in `<top (required)>'
+  39. /usr/local/bin/nanoc:23:in `load'
+
+===== VERSION INFORMATION:
+
+Nanoc 4.1.4 © 2007-2016 Denis Defreyne.
+Running ruby 2.1.1 (2014-02-24) on x86_64-linux with RubyGems 2.4.8.
+
+===== SYSTEM INFORMATION:
+
+Linux pnlnx001 2.6.32-573.1.1.el6.x86_64 #1 SMP Tue Jul 14 02:46:51 EDT 2015 x86_64 x86_64 x86_64 GNU/Linux
+
+===== INSTALLED GEMS:
+
+  bigdecimal 1.2.4
+  colored 1.2
+  configure-s3-website 1.7.1
+  cri 2.7.0
+  deep_merge 1.0.0
+  dotenv 1.0.2
+  io-console 0.4.2
+  json 1.8.1
+  minitest 4.7.5
+  nanoc 4.1.4
+  psych 2.0.3
+  rake 10.1.0
+  rdoc 4.1.0
+  rubygems-update 2.4.8
+  s3_website 2.12.2
+  test-unit 2.1.1.0
+  thor 0.19.1
+
+===== LOAD PATHS:
+
+  0. /usr/local/lib/ruby/gems/2.1.0/gems/colored-1.2/lib
+  1. /usr/local/lib/ruby/gems/2.1.0/gems/cri-2.7.0/lib
+  2. /usr/local/lib/ruby/gems/2.1.0/gems/nanoc-4.1.4/lib
+  3. /usr/local/lib/ruby/site_ruby/2.1.0
+  4. /usr/local/lib/ruby/site_ruby/2.1.0/x86_64-linux
+  5. /usr/local/lib/ruby/site_ruby
+  6. /usr/local/lib/ruby/vendor_ruby/2.1.0
+  7. /usr/local/lib/ruby/vendor_ruby/2.1.0/x86_64-linux
+  8. /usr/local/lib/ruby/vendor_ruby
+  9. /usr/local/lib/ruby/2.1.0
+  10. /usr/local/lib/ruby/2.1.0/x86_64-linux

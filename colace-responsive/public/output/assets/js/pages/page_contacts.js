@@ -1,0 +1,1 @@
+var ContactPage=function(){return{initMap:function(){var a;$(document).ready(function(){a=new GMaps({div:"#map",lat:40.748866,lng:-73.988366});a.addMarker({lat:40.748866,lng:-73.988366,title:"Company, Inc."})})},initPanorama:function(){var a;$(document).ready(function(){a=GMaps.createPanorama({el:"#panorama",lat:40.748866,lng:-73.988366})})}}}();

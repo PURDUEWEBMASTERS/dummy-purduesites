@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<head>
+     <title><%= @item[:title]%></title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content='<%= @item[:description]%>' />
+    <meta name="keywords" content='<%= @item[:keywords]%>' />
+    <meta name="author" content="">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="/assets/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="assets/plugins/flexslider/flexslider.css">     
+    <link rel="stylesheet" href="assets/plugins/parallax-slider/css/parallax-slider.css"> -->
+    <% if @item[:pageLavelCss] %>
+            <%= @item[:pageLavelCss]%>
+    <% end %>
+	
+
+    <!-- CSS Theme -->    
+    <link rel="stylesheet" href="/assets/css/themes/default.css" id="style_color">
+	<link rel="stylesheet" href="/assets/css/pages/page_job.css">
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="/assets/css/custom.css">
+   
+    
+    <!--[if lt IE 9]>
+    <script src="/assets/plugins/html5.js"></script>
+    <script src="/assets/plugins/respond.js"></script>
+    <script type="text/javascript">
+     // IE8 is the new IE6. Patch up http://stackoverflow.com/questions/2949910/how-to-make-href-will-work-on-button-in-ie8
+    /*  $('button').click(function(){
+       document.location = $(this).parents('a').first().prop('href');
+     });  */
+    </script>
+    <![endif]--> 
+
+
+</head>	
+
+<body class="boxed-layout container <%= @item[:bodyClass]%>">
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TZH777"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TZH777');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WKXPMX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WKXPMX');</script>
+
+<!-- End Google Tag Manager -->
+
+	<div class="wrapper boxShadow">
+		<!--=== Header ===-->    
+		<div class="header">
+			<%=render 'header' %>
+		</div><!--=== End Header ===-->    
+		<%= yield %>
+    <!--=== Footer ===-->
+    <div class="footer">
+        <% if @item[:homePage] %>
+			        <%=render 'footer-index' %>  
+			     <% else %>
+			        <%=render 'footer' %>  
+		<% end %>
+		
+    </div><!--=== End Footer ===-->
+  	
+	</div><!--/wrapper-->
+	
+
+	
+</body>
+ <script src="/assets/plugins/css3-mediaqueries.js"></script>
+ 
+    
+    
+<%= render "ga" %>
+
+<% if @item[:eventTracking] == true %>
+<script>
+/**
+* Function that tracks a click on an outbound link in Analytics.
+* This function takes a valid URL string as an argument, and uses that URL string
+* as the event label. Setting the transport method to 'beacon' lets the hit be sent
+* using 'navigator.sendBeacon' in browser that support it.
+*/
+var trackOutboundLink = function(url) {
+ga('send', 'event', 'outbound', 'click', url, {
+'transport': 'beacon',
+'hitCallback': function(){document.location = url;}
+});
+}
+</script>
+<% end %>
+    
+</html>	

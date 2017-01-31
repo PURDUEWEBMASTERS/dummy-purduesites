@@ -1,0 +1,105 @@
+---
+s3_id: AKIAJQPCUPWWFORNYDJQ
+s3_secret: 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
+s3_bucket: prod-colace-responsive
+cloudfront_distribution_id: E3TZ5FWZ1ZJPUB
+gzip: true
+max_age: 3600
+exclude_from_upload:
+- s3_website.yml
+routing_rules:
+- condition:
+    key_prefix_equals: colace/index.aspx
+  redirect:
+    host_name: www.colacecapsules.com
+    replace_key_prefix_with: colace/
+    http_redirect_code: 301
+- condition:
+    key_prefix_equals: peri-colace/index.aspx
+  redirect:
+    host_name: www.colacecapsules.com
+    replace_key_prefix_with: peri-colace/
+    http_redirect_code: 301
+- condition:
+    key_prefix_equals: buy/default.aspx
+  redirect:
+    host_name: www.colacecapsules.com
+    replace_key_prefix_with: buy/
+    http_redirect_code: 301
+- condition:
+    key_prefix_equals: savings/index.aspx
+  redirect:
+    host_name: www.colacecapsules.com
+    replace_key_prefix_with: savings/
+    http_redirect_code: 301
+- condition:
+    key_prefix_equals: constipation/index.aspx
+  redirect:
+    host_name: www.colacecapsules.com
+    replace_key_prefix_with: constipation/
+    http_redirect_code: 301
+- condition:
+    key_prefix_equals: constipation/causes.aspx
+  redirect:
+    host_name: www.colacecapsules.com
+    replace_key_prefix_with: constipation/causes/
+    http_redirect_code: 301
+- condition:
+    key_prefix_equals: constipation/pregnant.aspx
+  redirect:
+    host_name: www.colacecapsules.com
+    replace_key_prefix_with: constipation/pregnant/
+    http_redirect_code: 301
+- condition:
+    key_prefix_equals: constipation/medical.aspx
+  redirect:
+    host_name: www.colacecapsules.com
+    replace_key_prefix_with: constipation/medical/
+    http_redirect_code: 301
+- condition:
+    key_prefix_equals: constipation/prevention.aspx
+  redirect:
+    host_name: www.colacecapsules.com
+    replace_key_prefix_with: constipation/prevention/
+    http_redirect_code: 301
+- condition:
+    key_prefix_equals: legal/index.aspx
+  redirect:
+    host_name: www.colacecapsules.com
+    replace_key_prefix_with: legal/
+    http_redirect_code: 301
+- condition:
+    key_prefix_equals: about/index.aspx
+  redirect:
+    host_name: www.colacecapsules.com
+    replace_key_prefix_with: about/
+    http_redirect_code: 301
+- condition:
+    key_prefix_equals: media/index.aspx
+  redirect:
+    host_name: www.colacecapsules.com
+    replace_key_prefix_with: media/
+    http_redirect_code: 301
+- condition:
+    key_prefix_equals: contact/index.aspx
+  redirect:
+    host_name: www.colacecapsules.com
+    replace_key_prefix_with: contact/
+    http_redirect_code: 301
+- condition:
+    key_prefix_equals: sitemap/index.aspx
+  redirect:
+    host_name: www.colacecapsules.com
+    replace_key_prefix_with: sitemap/
+    http_redirect_code: 301
+error_document: sitemap/index.html
+extensionless_mime_type: text/html
+cloudfront_invalidate_root: false
+cloudfront_distribution_config:
+  default_cache_behavior:
+    min_TTL: <%= 60 * 60 * 24 * 7 %>
+  aliases:
+    quantity: 2
+    items:
+      CNAME0: www.colacecapsules.com
+      CNAME1: colacecapsules.com
